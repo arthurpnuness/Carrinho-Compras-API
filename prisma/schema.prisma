@@ -1,0 +1,23 @@
+//Aqui é onde define o schema do banco
+
+//o datasource define as info de conexão com o Banco de dados
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+//aqui define o gerador de cod que vai criar a bibliotea em JS pra acessar o banco definido
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Products {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  imageURL  String
+  price     Int      @default(0)
+  selling   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("products")
+}
