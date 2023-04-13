@@ -12,16 +12,26 @@ Uso
 A API possui três endpoints principais:
 -
 GET /carrinho
+
 Este endpoint retorna o carrinho de compras atual do usuário, incluindo todos os produtos adicionados.
+
 -
 POST /carrinho/produto/:id
+
 Este endpoint adiciona um produto ao carrinho de compras do usuário. É necessário fornecer o ID do produto na URL.
+
 -
 DELETE /carrinho/produto/:id
+
 Este endpoint remove um produto do carrinho de compras do usuário. É necessário fornecer o ID do produto na URL.
+
 -
 Contribuição
+
 Sinta-se à vontade para contribuir com este projeto criando issues ou pull requests. Todas as contribuições são bem-vindas!
+
 -
 Licença
+
 Este projeto está licenciado sob a licença MIT. Leia o arquivo LICENSE para mais informações.
+
